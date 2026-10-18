@@ -1,4 +1,3 @@
-
 import io
 from pathlib import Path
 
@@ -11,12 +10,11 @@ import yfinance as yf
 SELECTION_START = "2016-08-01"
 SELECTION_END = "2021-08-01"  # Exclusive
 PRICE_END = "2026-10-01"      # Exclusive
-BACKTEST_START = "2021-09-01"
 NUM_STOCKS = 30
 BATCH_SIZE = 50
 
 # Root-level data directory
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -174,7 +172,7 @@ def main():
 
     print(f"\nSaved stock list: {summary_path}")
     print(f"Saved stock prices: {price_path}")
-    print(f"Backtest begins: {BACKTEST_START}")
+    print("Forecasting begins after the first 252 daily returns (default training window).")
 
 
 if __name__ == "__main__":
