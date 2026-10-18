@@ -23,7 +23,7 @@ Selects 30 low-volatility stocks using historical S&P 500 membership and pre-Aug
 ## Generate forecasts
 
 ```bash
-uv run python scripts/run_forecasts.py --all --rolling
+uv run python scripts/run_forecast.py --all --rolling
 ```
 
 Uses 252 training returns, a 21-trading-day horizon, 21-day forecast spacing, and 10,000 Monte Carlo paths per forecast. The first forecast follows the first 252 returns. Saves `results/backtest_all.csv`.
@@ -31,7 +31,7 @@ Uses 252 training returns, a 21-trading-day horizon, 21-day forecast spacing, an
 For one stock and its first historical forecast:
 
 ```bash
-uv run python scripts/run_forecasts.py --ticker KO
+uv run python scripts/run_forecast.py --ticker KO
 ```
 
 ## Evaluate calibration
